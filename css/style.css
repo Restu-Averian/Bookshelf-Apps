@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input, button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+input, button {
+    font-size: 16px;
+}
+.on_top{
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(100,149,237,0.6);
+    color: white;
+    position:fixed;
+    top:0;
+    width:100%;
+    border-radius:0 0 50px 50px;
+    z-index:1;
+    transition:all 0.4s;
+}
+.head_bar {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+    color: white;
+    z-index:1;
+    transition:all 0.4s;
+}
+
+.jumbotron{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url("https://source.unsplash.com/1000x600?library");
+    height:400px;
+    background-attachment:fixed;
+    background-position:0px -200px;
+    background-repeat:no-repeat;
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+.content-jumbotron{
+    text-align:center;
+    color:white;
+}
+.jumbotron >.content-jumbotron>h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+.jumbotron >.content-jumbotron>hr{
+    border:3px solid white;
+    width:480px;
+    margin-bottom:20px;
+}
+.jumbotron >.content-jumbotron>p{
+    font-size:16px;
+    color:#F0F0F0;
+}
+hr{
+    width:800px;
+    margin:auto;
+    border-color:rgba(100,149,237,0.4);
+}
+main {
+    background-color:white;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 30px;
+    padding: 16px 0;
+    border-radius:20px;
+
+}
+#addBook{
+    background-color:#4B7CD3;
+    color:white;
+    border:0;
+    border-radius:50%;
+    padding:10px 20px;
+    position:fixed;
+    bottom:40px;
+    right:50px;
+    font-size:30px;
+    cursor:pointer;
+    box-shadow: 5px 10px 10px #2586AA;
+    transition:all 0.4s;
+}
+#addBook #spanAdd{
+    display:none;
+}
+#addBook:hover{
+    transform:translateY(-10px)
+}
+#addBook:active{
+    transform:translateY(20px);
+    
+}
+#overlay{
+    background-color:rgba(0,0,0,0.4);
+    position:fixed;
+    top:0;
+    bottom:0;
+    z-index:999;
+    left:0;
+    right:0;
+    display:none;
+}
+#overlay #closeBtn {
+    position:relative;
+    bottom:210px;
+    left:190px;
+    background-color:white;
+    padding:10px 20px;
+    border-radius:50%;
+    color:cornflowerblue;
+    font-size:30px;
+    border:3px solid cornflowerblue;
+    z-index:9999;
+    cursor:pointer;
+
+}
+.input_section {
+    display: none;
+    flex-direction: column;
+    padding: 26px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.input_section > h2 {
+    text-align: center;
+    color: cornflowerblue;
+}
+
+.input_section > form > .input {
+    margin: 20px 0;
+}
+
+.input_section > form > button {
+    background-color: cornflowerblue;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > button > span {
+    font-weight: bold;
+}
+
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+
+.input_section > form > .input > label {
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+    color: cornflowerblue;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.search_section {
+    background-color:white;
+    margin: 16px 0;
+    display: block;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.search_section > h2 {
+    color: cornflowerblue;
+    text-align:center;
+}
+
+.search_section > form {
+    padding: 16px;
+    width: 100%;
+  
+}
+
+
+
+.search_section > form > input {
+    padding: 15px;
+    border-radius: 5px;
+    display:block;
+    border-color:cornflowerblue;
+    margin:0 auto;
+    width:600px;
+    transition:all 0.4s;
+    z-index:0;
+    margin-bottom:10px;
+}
+
+.search_section > form > input:focus{
+    outline: none !important;
+    border:1px solid cornflowerblue;
+    box-shadow:0 5px 10px cornflowerblue;
+}
+.search_section > form > em{
+    font-size:14px;
+    
+}
+.book_shelf {
+    background-color:white;
+    margin: 16px 0 0 0;
+    /* border: 1px solid black; */
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.book_shelf > h2 {
+    color: cornflowerblue;
+}
+
+.book_shelf > .book_list {
+    padding: 16px;
+}
+.book_shelf > .book_list > .kotak-book{
+    display:flex;
+    border-left:3px solid #8AB4FE;
+    align-items:center;
+    margin-bottom:20px;
+    justify-content:space-between;
+}
+.book_shelf > .book_list > .kotak-book > .book_item {
+    padding: 8px 16px 16px 16px;
+    /* border: 1px solid blue; */
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.iconInBook{
+    color:cornflowerblue
+}
+.book_shelf > .book_list > .book_item > h3, p {
+    margin: 8px 0;
+}
+
+.action > button {
+    /* border: 0; */
+    border:1;
+    padding: 10px 15px;
+    font-size:20px;
+    margin: 0 5px 0 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.selesai {
+    background-color: cornflowerblue;
+    border:0;
+    color: white;
+}
+
+ .hapus {
+    background-color: darkred;
+    color: white;
+    border:0;
+}
+.blmselesai{
+    border:2px solid cornflowerblue;
+    color: cornflowerblue;
+    background:transparent;
+    transform:rotate(-90deg)
+}
+
+footer{
+    background-color:cornflowerblue;
+    text-align:center;
+    padding:20px;
+    color:white;
+}
